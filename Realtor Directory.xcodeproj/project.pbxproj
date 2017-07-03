@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6680A7B1F0AD12800C9775B /* RoundedOutlineImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6680A7A1F0AD12800C9775B /* RoundedOutlineImage.swift */; };
 		F6EF411F1F0AC86500A65324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EF411E1F0AC86500A65324 /* AppDelegate.swift */; };
-		F6EF41211F0AC86500A65324 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EF41201F0AC86500A65324 /* ViewController.swift */; };
+		F6EF41211F0AC86500A65324 /* DirectoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EF41201F0AC86500A65324 /* DirectoryVC.swift */; };
 		F6EF41241F0AC86500A65324 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6EF41221F0AC86500A65324 /* Main.storyboard */; };
 		F6EF41261F0AC86500A65324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6EF41251F0AC86500A65324 /* Assets.xcassets */; };
 		F6EF41291F0AC86500A65324 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6EF41271F0AC86500A65324 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F6680A7A1F0AD12800C9775B /* RoundedOutlineImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedOutlineImage.swift; sourceTree = "<group>"; };
 		F6EF411B1F0AC86500A65324 /* Realtor Directory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realtor Directory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EF411E1F0AC86500A65324 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6EF41201F0AC86500A65324 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F6EF41201F0AC86500A65324 /* DirectoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryVC.swift; sourceTree = "<group>"; };
 		F6EF41231F0AC86500A65324 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6EF41251F0AC86500A65324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6EF41281F0AC86500A65324 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +37,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6680A751F0AD05C00C9775B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F6680A761F0AD07F00C9775B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6680A7A1F0AD12800C9775B /* RoundedOutlineImage.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F6680A771F0AD08400C9775B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6EF41201F0AC86500A65324 /* DirectoryVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		F6EF41121F0AC86500A65324 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +79,10 @@
 		F6EF411D1F0AC86500A65324 /* Realtor Directory */ = {
 			isa = PBXGroup;
 			children = (
+				F6680A751F0AD05C00C9775B /* Model */,
+				F6680A761F0AD07F00C9775B /* View */,
+				F6680A771F0AD08400C9775B /* Controller */,
 				F6EF411E1F0AC86500A65324 /* AppDelegate.swift */,
-				F6EF41201F0AC86500A65324 /* ViewController.swift */,
 				F6EF41221F0AC86500A65324 /* Main.storyboard */,
 				F6EF41251F0AC86500A65324 /* Assets.xcassets */,
 				F6EF41271F0AC86500A65324 /* LaunchScreen.storyboard */,
@@ -137,7 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6EF41211F0AC86500A65324 /* ViewController.swift in Sources */,
+				F6680A7B1F0AD12800C9775B /* RoundedOutlineImage.swift in Sources */,
+				F6EF41211F0AC86500A65324 /* DirectoryVC.swift in Sources */,
 				F6EF411F1F0AC86500A65324 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +330,7 @@
 				F6EF412F1F0AC86500A65324 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
