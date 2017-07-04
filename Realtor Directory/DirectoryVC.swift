@@ -42,6 +42,11 @@ class DirectoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "RealtorCell", for: indexPath) as? RealtorCell {
+            
+            cell.firstName.text = realtorArray[indexPath.row]._first_name
+            cell.lastName.text = realtorArray[indexPath.row]._last_name
+            cell.phoneNumber.text = realtorArray[indexPath.row]._phone_number
+            
             return cell
         } else {
             return RealtorCell()
@@ -53,7 +58,6 @@ class DirectoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             
             if let value = response.result.value {
                 let json = JSON(value)
-//                print(json.array!)
                 
                 for realtor in json.array! {
                     let first_name = realtor["first_name"].stringValue.capitalized
@@ -70,6 +74,7 @@ class DirectoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                     
                     self.realtorArray.append(newRealtor)
                 }
+                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }

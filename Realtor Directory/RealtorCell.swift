@@ -12,7 +12,8 @@ class RealtorCell: UITableViewCell {
 
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var thumbPortrait: RoundedOutlineImage!
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var firstName: UILabel!
+    @IBOutlet weak var lastName: UILabel!
     @IBOutlet weak var phoneNumber: UILabel!
     
     
