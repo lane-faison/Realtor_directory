@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" red="0.82355686363888891" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="ge0-DA-t9t">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RealtorCell" rowHeight="90" id="ge0-DA-t9t" customClass="RealtorCell" customModule="Realtor_Directory" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ge0-DA-t9t" id="3P2-gL-Xzw">
@@ -105,6 +105,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="NiV-Eu-Lcu" secondAttribute="bottom" constant="5" id="jsb-1l-vTh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name" destination="cwU-7Y-OLh" id="sqc-w3-ZsZ"/>
+                                            <outlet property="phoneNumber" destination="X2r-ei-sDe" id="mVy-Dy-VRU"/>
+                                            <outlet property="thumbPortrait" destination="Rxj-6V-g3c" id="a8D-JS-t9w"/>
+                                            <outlet property="view" destination="NiV-Eu-Lcu" id="UrV-LN-Dy3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -120,6 +126,9 @@
                             <constraint firstAttribute="trailing" secondItem="3sP-BQ-3KC" secondAttribute="trailing" id="yb0-gh-Imb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="3sP-BQ-3KC" id="dlq-GM-uXp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
