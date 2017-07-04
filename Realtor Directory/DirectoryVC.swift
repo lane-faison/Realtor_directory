@@ -27,6 +27,10 @@ class DirectoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         downloadRealtorData()
     
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -42,9 +46,15 @@ class DirectoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "RealtorCell", for: indexPath) as? RealtorCell {
+          
+            // Reduce the image size to a width of 50px before adding it to the RealtorCell
+            let thumbnailUrl = realtorArray[indexPath.row]._photo + "/width/50"
+            let url = URL(string: thumbnailUrl)
+            let data = try? Data(contentsOf: url!)
+            let portrait = UIImage(data: data!)
             
-            cell.firstName.text = realtorArray[indexPath.row]._first_name
-            cell.lastName.text = realtorArray[indexPath.row]._last_name
+            cell.thumbPortrait.image = portrait
+            cell.name.text = realtorArray[indexPath.row]._first_name + " " + realtorArray[indexPath.row]._last_name
             cell.phoneNumber.text = realtorArray[indexPath.row]._phone_number
             
             return cell
