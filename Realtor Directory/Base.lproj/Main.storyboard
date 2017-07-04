@@ -32,7 +32,14 @@
                                     <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Realtor Directory" id="Guv-F2-ZHv"/>
+                                    <navigationItem title="Realtor Directory" id="0Rh-lz-exh" userLabel="Realtor Directory">
+                                        <barButtonItem key="rightBarButtonItem" image="sort" id="Zwk-JE-6cK">
+                                            <color key="tintColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="sortBtnTapped:" destination="BYZ-38-t0r" id="4BM-ki-2Wy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3sP-BQ-3KC">
@@ -45,14 +52,14 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ge0-DA-t9t" id="3P2-gL-Xzw">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiV-Eu-Lcu">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Me01" translatesAutoresizingMaskIntoConstraints="NO" id="Rxj-6V-g3c" customClass="RoundedOutlineImage" customModule="Realtor_Directory" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="10" width="70" height="69.5"/>
+                                                            <rect key="frame" x="10" y="10" width="70" height="69.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="70" id="MXt-xX-Bpe"/>
                                                                 <constraint firstAttribute="height" constant="70" id="wVi-I7-bKi"/>
@@ -62,15 +69,15 @@
                                                                     <real key="value" value="35"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                    <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="value" red="0.5450980392" green="0.76470588240000004" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                    <real key="value" value="1"/>
+                                                                    <real key="value" value="2"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="uBc-r7-hYM">
-                                                            <rect key="frame" x="85" y="5" width="230" height="80"/>
+                                                            <rect key="frame" x="90" y="5" width="225" height="80"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lane Faison" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="cwU-7Y-OLh">
                                                                     <rect key="frame" x="0.0" y="0.0" width="93" height="40"/>
@@ -94,7 +101,7 @@
                                                         <constraint firstItem="Rxj-6V-g3c" firstAttribute="top" secondItem="NiV-Eu-Lcu" secondAttribute="top" constant="10" id="Trw-jS-7T9"/>
                                                         <constraint firstAttribute="bottom" secondItem="uBc-r7-hYM" secondAttribute="bottom" constant="5" id="X0Y-12-KPf"/>
                                                         <constraint firstAttribute="trailing" secondItem="uBc-r7-hYM" secondAttribute="trailing" constant="5" id="bha-yt-QFR"/>
-                                                        <constraint firstItem="Rxj-6V-g3c" firstAttribute="leading" secondItem="NiV-Eu-Lcu" secondAttribute="leading" constant="5" id="gBz-gd-cEt"/>
+                                                        <constraint firstItem="Rxj-6V-g3c" firstAttribute="leading" secondItem="NiV-Eu-Lcu" secondAttribute="leading" constant="10" id="gBz-gd-cEt"/>
                                                         <constraint firstItem="uBc-r7-hYM" firstAttribute="top" secondItem="NiV-Eu-Lcu" secondAttribute="top" constant="5" id="jd6-bV-fNd"/>
                                                         <constraint firstAttribute="bottom" secondItem="Rxj-6V-g3c" secondAttribute="bottom" constant="10" id="sF4-bm-qO2"/>
                                                     </constraints>
@@ -116,19 +123,38 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HP9-kR-xJn" customClass="PickerViewOutline" customModule="Realtor_Directory" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="80" width="320" height="150"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="baT-QS-Rxa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.5450980392" green="0.76470588240000004" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.40784313729999999" green="0.62352941179999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="JPf-AE-5aJ" secondAttribute="trailing" id="KVc-2g-c1b"/>
+                            <constraint firstItem="HP9-kR-xJn" firstAttribute="top" secondItem="JPf-AE-5aJ" secondAttribute="bottom" id="Niz-76-TE1"/>
+                            <constraint firstItem="HP9-kR-xJn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UCR-Wh-jZ5"/>
                             <constraint firstItem="3sP-BQ-3KC" firstAttribute="top" secondItem="JPf-AE-5aJ" secondAttribute="bottom" id="cj9-4P-tYL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3sP-BQ-3KC" secondAttribute="bottom" id="eGp-vv-Lur"/>
                             <constraint firstItem="JPf-AE-5aJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eNT-ue-5g8"/>
                             <constraint firstItem="3sP-BQ-3KC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fqG-tO-VWy"/>
+                            <constraint firstAttribute="trailing" secondItem="HP9-kR-xJn" secondAttribute="trailing" id="hcK-H5-6fO"/>
                             <constraint firstItem="JPf-AE-5aJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vMw-LG-wd5"/>
                             <constraint firstAttribute="trailing" secondItem="3sP-BQ-3KC" secondAttribute="trailing" id="yb0-gh-Imb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="sortPicker" destination="HP9-kR-xJn" id="KDG-Sl-4YS"/>
                         <outlet property="tableView" destination="3sP-BQ-3KC" id="dlq-GM-uXp"/>
                     </connections>
                 </viewController>
@@ -139,5 +165,6 @@
     </scenes>
     <resources>
         <image name="Me01" width="459" height="459"/>
+        <image name="sort" width="40" height="40"/>
     </resources>
 </document>
