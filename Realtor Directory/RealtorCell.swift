@@ -12,11 +12,10 @@ class RealtorCell: UITableViewCell {
 
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var thumbPortrait: RoundedOutlineImage!
-    @IBOutlet weak var firstName: UILabel!
-    @IBOutlet weak var lastName: UILabel!
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var phoneNumber: UILabel!
     
-    
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,8 +24,8 @@ class RealtorCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
+        
     }
 
 }
