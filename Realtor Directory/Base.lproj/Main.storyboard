@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s8C-qh-mQb">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,46 +9,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--DirectoryVC-->
+        <!--Navigation Controller-->
+        <scene sceneID="VNX-5O-Qt2">
+            <objects>
+                <navigationController id="s8C-qh-mQb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="1Xe-46-nPx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.5450980392" green="0.76470588240000004" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="czc-oV-z24"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09Y-Kh-22X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-949" y="138"/>
+        </scene>
+        <!--Realtor Directory-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DirectoryVC" customModule="Realtor_Directory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Realtor Directory" id="BYZ-38-t0r" customClass="DirectoryVC" customModule="Realtor_Directory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPf-AE-5aJ">
-                                <rect key="frame" x="-0.5" y="20" width="320" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="D5j-Nc-8QF"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.5450980392" green="0.76470588240000004" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                    <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Realtor Directory" id="0Rh-lz-exh" userLabel="Realtor Directory">
-                                        <barButtonItem key="rightBarButtonItem" image="sort" id="Zwk-JE-6cK">
-                                            <color key="tintColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <connections>
-                                                <action selector="sortBtnTapped:" destination="BYZ-38-t0r" id="4BM-ki-2Wy"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3sP-BQ-3KC">
-                                <rect key="frame" x="0.0" y="80" width="320" height="488"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3sP-BQ-3KC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.40784313729999999" green="0.62352941179999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RealtorCell" rowHeight="90" id="ge0-DA-t9t" customClass="RealtorCell" customModule="Realtor_Directory" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RealtorCell" rowHeight="90" id="ge0-DA-t9t" customClass="RealtorCell" customModule="Realtor_Directory" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ge0-DA-t9t" id="3P2-gL-Xzw">
@@ -58,7 +58,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiV-Eu-Lcu">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Me01" translatesAutoresizingMaskIntoConstraints="NO" id="Rxj-6V-g3c" customClass="RoundedOutlineImage" customModule="Realtor_Directory" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Rxj-6V-g3c" customClass="RoundedOutlineImage" customModule="Realtor_Directory" customModuleProvider="target">
                                                             <rect key="frame" x="10" y="10" width="70" height="69.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="70" id="MXt-xX-Bpe"/>
@@ -124,14 +124,14 @@
                                 </prototypes>
                             </tableView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HP9-kR-xJn" customClass="PickerViewOutline" customModule="Realtor_Directory" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="80" width="320" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="baT-QS-Rxa"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="4"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.5450980392" green="0.76470588240000004" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -139,32 +139,135 @@
                                 </userDefinedRuntimeAttributes>
                             </pickerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.40784313729999999" green="0.62352941179999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="JPf-AE-5aJ" secondAttribute="trailing" id="KVc-2g-c1b"/>
-                            <constraint firstItem="HP9-kR-xJn" firstAttribute="top" secondItem="JPf-AE-5aJ" secondAttribute="bottom" id="Niz-76-TE1"/>
                             <constraint firstItem="HP9-kR-xJn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UCR-Wh-jZ5"/>
-                            <constraint firstItem="3sP-BQ-3KC" firstAttribute="top" secondItem="JPf-AE-5aJ" secondAttribute="bottom" id="cj9-4P-tYL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3sP-BQ-3KC" secondAttribute="bottom" id="eGp-vv-Lur"/>
-                            <constraint firstItem="JPf-AE-5aJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eNT-ue-5g8"/>
                             <constraint firstItem="3sP-BQ-3KC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fqG-tO-VWy"/>
+                            <constraint firstItem="3sP-BQ-3KC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gn2-cz-rBi"/>
                             <constraint firstAttribute="trailing" secondItem="HP9-kR-xJn" secondAttribute="trailing" id="hcK-H5-6fO"/>
-                            <constraint firstItem="JPf-AE-5aJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vMw-LG-wd5"/>
                             <constraint firstAttribute="trailing" secondItem="3sP-BQ-3KC" secondAttribute="trailing" id="yb0-gh-Imb"/>
+                            <constraint firstItem="HP9-kR-xJn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zQi-dM-loH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Realtor Directory" id="dEN-XQ-6J8">
+                        <barButtonItem key="rightBarButtonItem" image="sort" id="X9l-vO-Vrs">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="sortBtnTapped:" destination="BYZ-38-t0r" id="io8-bC-s8j"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="sortPicker" destination="HP9-kR-xJn" id="KDG-Sl-4YS"/>
                         <outlet property="tableView" destination="3sP-BQ-3KC" id="dlq-GM-uXp"/>
+                        <segue destination="7fh-1b-USl" kind="show" identifier="RealtorDetails" id="6L7-qy-zXP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.875" y="138.38028169014083"/>
         </scene>
+        <!--RealtorDetailsVC-->
+        <scene sceneID="DeY-vQ-EXS">
+            <objects>
+                <viewController title="RealtorDetailsVC" id="7fh-1b-USl" customClass="RealtorDetailsVC" customModule="Realtor_Directory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ap7-fw-Ed9"/>
+                        <viewControllerLayoutGuide type="bottom" id="t8N-Xd-SCV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kqj-Y2-4u0">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home1" translatesAutoresizingMaskIntoConstraints="NO" id="apS-sX-TRJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="XL1-eo-hBz"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Hfv-eh-7xe" customClass="RoundedOutlineImage" customModule="Realtor_Directory" customModuleProvider="target">
+                                <rect key="frame" x="70" y="125" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="nnW-Hp-znz"/>
+                                    <constraint firstAttribute="width" constant="180" id="wQI-Fx-9oF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Oa-6P-fsC">
+                                <rect key="frame" x="20" y="325" width="280" height="124"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lane Faison" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJQ-Nx-2Cr">
+                                        <rect key="frame" x="93.5" y="0.0" width="93" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kentwood Cherry Creek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwF-B2-I1a">
+                                        <rect key="frame" x="46.5" y="33.5" width="187" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Broker Associate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B66-XE-52b">
+                                        <rect key="frame" x="75.5" y="67" width="129.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="310-751-4142" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBN-2y-a4j">
+                                        <rect key="frame" x="85.5" y="100.5" width="109.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="apS-sX-TRJ" firstAttribute="top" secondItem="Ap7-fw-Ed9" secondAttribute="bottom" id="A5P-2A-sc0"/>
+                            <constraint firstItem="1Oa-6P-fsC" firstAttribute="top" secondItem="Hfv-eh-7xe" secondAttribute="bottom" constant="20" id="Oqr-TH-qdw"/>
+                            <constraint firstAttribute="trailing" secondItem="apS-sX-TRJ" secondAttribute="trailing" id="QzJ-nD-p88"/>
+                            <constraint firstItem="1Oa-6P-fsC" firstAttribute="leading" secondItem="Kqj-Y2-4u0" secondAttribute="leading" constant="20" id="dQG-C3-Ltb"/>
+                            <constraint firstItem="apS-sX-TRJ" firstAttribute="leading" secondItem="Kqj-Y2-4u0" secondAttribute="leading" id="opr-jm-kdl"/>
+                            <constraint firstItem="Hfv-eh-7xe" firstAttribute="top" secondItem="Ap7-fw-Ed9" secondAttribute="bottom" constant="125" id="uLr-Xy-aMN"/>
+                            <constraint firstAttribute="trailing" secondItem="1Oa-6P-fsC" secondAttribute="trailing" constant="20" id="xit-gR-pFP"/>
+                            <constraint firstItem="Hfv-eh-7xe" firstAttribute="centerX" secondItem="Kqj-Y2-4u0" secondAttribute="centerX" id="zQy-rl-oBC"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Realtor Details" id="8IY-rf-QyW">
+                        <barButtonItem key="backBarButtonItem" style="plain" id="PMV-Ps-7E5">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="houseImage" destination="apS-sX-TRJ" id="j5E-pU-aYA"/>
+                        <outlet property="name" destination="uJQ-Nx-2Cr" id="qA3-9G-dRo"/>
+                        <outlet property="office" destination="qwF-B2-I1a" id="aCN-fk-Z2w"/>
+                        <outlet property="phoneNumber" destination="OBN-2y-a4j" id="Tm9-mw-XDM"/>
+                        <outlet property="portrait" destination="Hfv-eh-7xe" id="clf-WU-BKH"/>
+                        <outlet property="position" destination="B66-XE-52b" id="XPy-ki-GyI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PP5-UE-Nko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221" y="143"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Me01" width="459" height="459"/>
+        <image name="avatar" width="70" height="70"/>
+        <image name="home1" width="600" height="299"/>
         <image name="sort" width="40" height="40"/>
     </resources>
 </document>

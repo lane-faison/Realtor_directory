@@ -10,6 +10,7 @@
 		3C82EC81085186C4E10CAF2A /* Pods_Realtor_Directory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D31C4D1EDAB558BBE1CF7B0 /* Pods_Realtor_Directory.framework */; };
 		F63A6FF91F0AD62300989AF5 /* RealtorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A6FF81F0AD62300989AF5 /* RealtorCell.swift */; };
 		F63A6FFB1F0AECA800989AF5 /* Realtor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A6FFA1F0AECA800989AF5 /* Realtor.swift */; };
+		F64439D21F0C4A7000F9A903 /* RealtorDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64439D11F0C4A7000F9A903 /* RealtorDetailsVC.swift */; };
 		F6680A7B1F0AD12800C9775B /* RoundedOutlineImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6680A7A1F0AD12800C9775B /* RoundedOutlineImage.swift */; };
 		F6A79A111F0B7697001A5930 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A79A101F0B7697001A5930 /* ColorScheme.swift */; };
 		F6ECD9C31F0C01A00060632C /* PickerViewOutline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ECD9C21F0C01A00060632C /* PickerViewOutline.swift */; };
@@ -26,6 +27,7 @@
 		D7AC88DB51F030B6C1E39A7C /* Pods-Realtor Directory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Realtor Directory.release.xcconfig"; path = "Pods/Target Support Files/Pods-Realtor Directory/Pods-Realtor Directory.release.xcconfig"; sourceTree = "<group>"; };
 		F63A6FF81F0AD62300989AF5 /* RealtorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtorCell.swift; sourceTree = "<group>"; };
 		F63A6FFA1F0AECA800989AF5 /* Realtor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realtor.swift; sourceTree = "<group>"; };
+		F64439D11F0C4A7000F9A903 /* RealtorDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtorDetailsVC.swift; sourceTree = "<group>"; };
 		F6680A7A1F0AD12800C9775B /* RoundedOutlineImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedOutlineImage.swift; sourceTree = "<group>"; };
 		F6A79A101F0B7697001A5930 /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		F6ECD9C21F0C01A00060632C /* PickerViewOutline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewOutline.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				F6EF41201F0AC86500A65324 /* DirectoryVC.swift */,
+				F64439D11F0C4A7000F9A903 /* RealtorDetailsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6680A7B1F0AD12800C9775B /* RoundedOutlineImage.swift in Sources */,
+				F64439D21F0C4A7000F9A903 /* RealtorDetailsVC.swift in Sources */,
 				F63A6FF91F0AD62300989AF5 /* RealtorCell.swift in Sources */,
 				F6EF41211F0AC86500A65324 /* DirectoryVC.swift in Sources */,
 				F63A6FFB1F0AECA800989AF5 /* Realtor.swift in Sources */,

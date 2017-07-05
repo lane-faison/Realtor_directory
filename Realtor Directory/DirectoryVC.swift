@@ -31,16 +31,38 @@ class DirectoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         sortPicker.isHidden = true
         
         downloadRealtorData()
+    }
     
+    // SEGUE FUNCTIONS
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if realtorArray.count > 0 {
+            let realtor = realtorArray[indexPath.row]
+            performSegue(withIdentifier: "RealtorDetails", sender: realtor)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "RealtorDetails" {
+            if let destination = segue.destination as? RealtorDetailsVC {
+                if let realtor = sender as? Realtor {
+                    destination.realtorClicked = realtor
+                }
+            }
+        }
     }
     
     // TABLEVIEW FUNCTIONS
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return 90
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
+        
         return 1
     }
     
@@ -53,6 +75,7 @@ class DirectoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
         if let cell = tableView.dequeueReusableCell(withIdentifier: "RealtorCell", for: indexPath) as? RealtorCell {
           
             // Reduce the image size to a width of 50px before adding it to the RealtorCell
@@ -74,6 +97,7 @@ class DirectoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     // PICKERVIEW FUNCTIONS
     
     @IBAction func sortBtnTapped(_ sender: Any) {
+        
         if sortPicker.isHidden == true {
             sortPicker.isHidden = false
         } else {
@@ -82,14 +106,17 @@ class DirectoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
+       
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
         return sortOptions.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
         self.view.endEditing(true)
         return sortOptions[row]
     }
@@ -151,10 +178,3 @@ class DirectoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         }
     }
 }
-
-
-
-
-
-
-
