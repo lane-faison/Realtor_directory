@@ -157,7 +157,7 @@ class DirectoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
                     let last_name = realtor["last_name"].stringValue.capitalized
                     let id = realtor["id"].stringValue
                     let rebrand = realtor["rebrand"].stringValue.capitalized
-                    let office = realtor["office"].stringValue.capitalized
+                    let office = realtor["office"].stringValue
                     let is_team = realtor["is_team"].boolValue
                     let phone_number = realtor["phone_number"].stringValue
                     let photo = realtor["photo"].stringValue
