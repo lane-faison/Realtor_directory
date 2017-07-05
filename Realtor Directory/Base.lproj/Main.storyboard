@@ -185,32 +185,48 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home1" translatesAutoresizingMaskIntoConstraints="NO" id="apS-sX-TRJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home1" translatesAutoresizingMaskIntoConstraints="NO" id="apS-sX-TRJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="XL1-eo-hBz"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Hfv-eh-7xe" customClass="RoundedOutlineImage" customModule="Realtor_Directory" customModuleProvider="target">
-                                <rect key="frame" x="70" y="125" width="180" height="180"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jd-m8-Weg" customClass="RoundedOutlineView" customModule="Realtor_Directory" customModuleProvider="target">
+                                <rect key="frame" x="70" y="110" width="180" height="180"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Hfv-eh-7xe" customClass="RoundedOutlineImage" customModule="Realtor_Directory" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="5" width="170" height="170"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="nnW-Hp-znz"/>
+                                            <constraint firstAttribute="width" constant="170" id="wQI-Fx-9oF"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="85"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="nnW-Hp-znz"/>
-                                    <constraint firstAttribute="width" constant="180" id="wQI-Fx-9oF"/>
+                                    <constraint firstAttribute="height" constant="180" id="22i-JU-brE"/>
+                                    <constraint firstItem="Hfv-eh-7xe" firstAttribute="leading" secondItem="0jd-m8-Weg" secondAttribute="leading" constant="5" id="4I2-e7-IIB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hfv-eh-7xe" secondAttribute="trailing" constant="5" id="OJr-nt-Z5l"/>
+                                    <constraint firstAttribute="width" constant="180" id="RgD-8L-4hB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hfv-eh-7xe" secondAttribute="bottom" constant="5" id="gJL-Oj-w8C"/>
+                                    <constraint firstItem="Hfv-eh-7xe" firstAttribute="top" secondItem="0jd-m8-Weg" secondAttribute="top" constant="5" id="vhW-nd-3ON"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="90"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </imageView>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1Oa-6P-fsC">
-                                <rect key="frame" x="20" y="325" width="280" height="123.5"/>
+                                <rect key="frame" x="20" y="310" width="280" height="123.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c2g-84-HvB">
                                         <rect key="frame" x="46.5" y="0.0" width="187" height="56.5"/>
@@ -247,18 +263,19 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.62352941179999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="apS-sX-TRJ" firstAttribute="top" secondItem="Ap7-fw-Ed9" secondAttribute="bottom" id="A5P-2A-sc0"/>
-                            <constraint firstItem="1Oa-6P-fsC" firstAttribute="top" secondItem="Hfv-eh-7xe" secondAttribute="bottom" constant="20" id="Oqr-TH-qdw"/>
+                            <constraint firstItem="0jd-m8-Weg" firstAttribute="centerX" secondItem="Kqj-Y2-4u0" secondAttribute="centerX" id="IGD-IH-NO7"/>
+                            <constraint firstItem="0jd-m8-Weg" firstAttribute="top" secondItem="Ap7-fw-Ed9" secondAttribute="bottom" constant="110" id="O3N-FW-DKg"/>
                             <constraint firstAttribute="trailing" secondItem="apS-sX-TRJ" secondAttribute="trailing" id="QzJ-nD-p88"/>
                             <constraint firstItem="1Oa-6P-fsC" firstAttribute="leading" secondItem="Kqj-Y2-4u0" secondAttribute="leading" constant="20" id="dQG-C3-Ltb"/>
+                            <constraint firstItem="1Oa-6P-fsC" firstAttribute="top" secondItem="0jd-m8-Weg" secondAttribute="bottom" constant="20" id="fcp-JE-LpU"/>
                             <constraint firstItem="apS-sX-TRJ" firstAttribute="leading" secondItem="Kqj-Y2-4u0" secondAttribute="leading" id="opr-jm-kdl"/>
-                            <constraint firstItem="Hfv-eh-7xe" firstAttribute="top" secondItem="Ap7-fw-Ed9" secondAttribute="bottom" constant="125" id="uLr-Xy-aMN"/>
                             <constraint firstAttribute="trailing" secondItem="1Oa-6P-fsC" secondAttribute="trailing" constant="20" id="xit-gR-pFP"/>
-                            <constraint firstItem="Hfv-eh-7xe" firstAttribute="centerX" secondItem="Kqj-Y2-4u0" secondAttribute="centerX" id="zQy-rl-oBC"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

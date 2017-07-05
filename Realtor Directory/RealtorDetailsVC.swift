@@ -11,6 +11,7 @@ import UIKit
 class RealtorDetailsVC: UIViewController {
 
     var realtorClicked: Realtor?
+    let gradientLayer = CAGradientLayer()
     
     @IBOutlet weak var houseImage: UIImageView!
     @IBOutlet weak var portrait: RoundedOutlineImage!
@@ -22,10 +23,27 @@ class RealtorDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // GREEN GRADIENT AT BASE OF VIEW
+        
+        gradientLayer.frame = self.view.bounds
+        let color1 = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0).cgColor
+        let color2 = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0).cgColor
+        let color3 = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0).cgColor
+        let color4 = UIColor(red: 104/255, green: 159/255, blue: 56/255, alpha: 1.0).cgColor
+        gradientLayer.colors = [color1,color2,color3,color4]
+        gradientLayer.locations = [0.0,0.25,0.75,0.9]
+        self.view.layer.addSublayer(gradientLayer)
+        
         generateRandomHome()
         showRealtorDetails()
     }
-
+    
+    func generateRandomHome() {
+        
+        let number = arc4random_uniform(8) + 1
+        houseImage.image = UIImage(named: "home\(number)")
+    }
+    
     func showRealtorDetails() {
       
         if realtorClicked != nil {
@@ -44,11 +62,4 @@ class RealtorDetailsVC: UIViewController {
             phoneNumber.text = realtorClicked?._phone_number
         }
     }
-    
-    func generateRandomHome() {
-       
-        let number = arc4random_uniform(8) + 1
-        houseImage.image = UIImage(named: "home\(number)")
-    }
-
 }
