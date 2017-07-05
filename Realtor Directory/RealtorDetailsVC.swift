@@ -22,6 +22,7 @@ class RealtorDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        generateRandomHome()
         showRealtorDetails()
     }
 
@@ -41,8 +42,13 @@ class RealtorDetailsVC: UIViewController {
             office.text = realtorClicked?._office
             position.text = realtorClicked?._title
             phoneNumber.text = realtorClicked?._phone_number
-            
         }
+    }
+    
+    func generateRandomHome() {
+       
+        let number = arc4random_uniform(8) + 1
+        houseImage.image = UIImage(named: "home\(number)")
     }
 
 }
